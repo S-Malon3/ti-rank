@@ -39,11 +39,11 @@ function PlayerDetails() {
 
 	}
 
-	const handleSubmit = (event) => {
+	const handleSubmit = async (event) => {
 		event.preventDefault();
-		player.setName(formVals.name);
-		player.setRank(formVals.rank);
-		player.setGameCount(formVals.gameCount);
+		await player.setName(formVals.name);
+		await player.setRank(Number(formVals.rank));
+		await player.setGameCount(Number(formVals.gameCount));
 		navigate("/"+groupId+"/"+formVals.name, {replace: true});
 		if (refreshSidebar.current) {
 			refreshSidebar.current();
