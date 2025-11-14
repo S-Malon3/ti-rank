@@ -91,42 +91,50 @@ function Sidebar({ group, callback: callbackRefreshPlayerSidebar }) {
 	
 	return (
 		<div className="sidebar">
-			<div className="sidebarHeader">
-				Ranks
-			</div>
-
-			{rankedPlayers.map((player, index) => {
-				let rankColor = getRankColor(player.rank);
-				const isEvenRow = index % 2 === 0;
-
-				rankColor = isEvenRow ? rankColor : rankColor.concat("-dark")
-					  
-				return (
-					<div key={player.name} className={`player-box ${rankColor}`} onClick={() => handleNavigate(player.name)}>
-						<span className="player-name">{player.name}</span>
-						<span className="player-rank">{formatNumberWithCommas(player.rank)}</span>
-					</div>
-				);
-			})}
-
-			{unrankedPlayers.length > 0 && (
+			{unrankedPlayers.length === 0 && rankedPlayers.length === 0 ? (
+				<div className="sidebar-textbox">
+					<p>There are no players in this group</p>
+					<button disabled>Create a new Player</button>
+				</div>
+			) : (
 				<>
 					<div className="sidebarHeader">
-						<span className="sidebarHeader-left">Unranked</span>
-						<span className="sidebarHeader-subtext">games until rank</span>
+						Ranks
 					</div>
-					{unrankedPlayers.map((player, index) => {
+					{rankedPlayers.map((player, index) => {
+						let rankColor = getRankColor(player.rank);
 						const isEvenRow = index % 2 === 0;
-						const rankColor = isEvenRow ? "unranked" : "unranked-dark"
 
+						rankColor = isEvenRow ? rankColor : rankColor.concat("-dark")
+							  
 						return (
 							<div key={player.name} className={`player-box ${rankColor}`} onClick={() => handleNavigate(player.name)}>
 								<span className="player-name">{player.name}</span>
 								<span className="player-rank">{formatNumberWithCommas(player.rank)}</span>
-								<span className="player-rank">{3-player.gameCount}</span>
 							</div>
 						);
 					})}
+
+					{unrankedPlayers.length > 0 && (
+						<>
+							<div className="sidebarHeader">
+								<span className="sidebarHeader-left">Unranked</span>
+								<span className="sidebarHeader-subtext">games until rank</span>
+							</div>
+							{unrankedPlayers.map((player, index) => {
+								const isEvenRow = index % 2 === 0;
+								const rankColor = isEvenRow ? "unranked" : "unranked-dark"
+
+								return (
+									<div key={player.name} className={`player-box ${rankColor}`} onClick={() => handleNavigate(player.name)}>
+										<span className="player-name">{player.name}</span>
+										<span className="player-rank">{formatNumberWithCommas(player.rank)}</span>
+										<span className="player-rank">{3-player.gameCount}</span>
+									</div>
+								);
+							})}
+						</>
+					)}
 				</>
 			)}
 		</div>

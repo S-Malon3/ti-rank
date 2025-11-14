@@ -57,6 +57,56 @@
 	width: 70px; /* Adjust this value as needed to align the numbers */
 }
 
+.sidebar-textbox {
+	font-size: 24px;
+	color: white;
+	padding: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.sidebar-textbox p {
+	margin: 10px;
+	width: 100%;
+}
+
+.sidebar-textbox button{
+	margin: 10px;
+	background: linear-gradient(    
+		to bottom,
+		#f5a97f 0%,
+		#e6c47f 49.5%,
+		#deb974 50%,
+		#e6c47f 50.5%,
+		#eed49f 100%
+	);
+	padding: 7px;
+	font-size: 18px;
+	color: #11111b;
+	border-radius: 5px;
+	border: 2px solid #eed49f;
+}
+
+.sidebar-textbox button:disabled {
+	margin: 10px;
+	padding: 7px;
+	font-size: 18px;
+	color: #555;
+	border-radius: 5px;
+	border: 2px solid #ccc; 
+	background: linear-gradient(
+		to bottom,
+		#b57c5f 0%,
+		#c1a678 49.5%,
+		#bba366 50%,
+		#c1a678 50.5%, 
+		#d5c18f 100%
+	);
+	cursor: not-allowed; 
+	opacity: 0.7; 
+}
+
 
 /* rank colors */
 
