@@ -2,6 +2,7 @@ import React, { useEffect, useState, createContext, useRef } from 'react';
 import { Outlet } from 'react-router'
 import './GamesPage.css';
 
+import NavDropdown from 'components/NavDropdown'
 import Sidebar from 'components/Sidebar';
 
 function GamesPage() {
@@ -14,6 +15,7 @@ function GamesPage() {
 	return (
 		<div className="App">
 			<div className="header">
+				<NavDropdown className="header-button"/>
 				Game History
 			</div>
 			<div className="main-content">

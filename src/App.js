@@ -11,7 +11,7 @@ function App() {
 			<Routes>
 				<Route path="/" element={<SelectGroup />} />
 				<Route path="/:groupId" element={<GamesPage />}>
-					<Route path=":playerName" element={<PlayerDetails />} />
+					<Route path="player/:playerName" element={<PlayerDetails />} />
 				</Route>
 			</Routes>
 		</Router>

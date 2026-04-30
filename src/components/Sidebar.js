@@ -84,7 +84,7 @@ function Sidebar({ group, callback: callbackRefreshPlayerSidebar }) {
 	const navigate = useNavigate()
 
 	const handleNavigate = (playerID) => {
-		navigate(`./${playerID}`);
+		navigate(`./player/${playerID}`);
 	}
 
 	// === HTML === //

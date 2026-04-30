@@ -33,6 +33,11 @@ body {
 	flex-grow: 1;
 }
 
+.header-button {
+	position: absolute;
+	left: 0;
+}
+
 /* main content area styling */
 
 .main-content {

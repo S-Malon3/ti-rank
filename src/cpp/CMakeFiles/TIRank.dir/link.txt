@@ -1,0 +1,1 @@
+/sbin/c++ -Wl,--dependency-file=CMakeFiles/TIRank.dir/link.d CMakeFiles/TIRank.dir/main.cpp.o CMakeFiles/TIRank.dir/Player.cpp.o -o TIRank

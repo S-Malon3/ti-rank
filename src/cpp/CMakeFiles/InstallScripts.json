@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/Selby/Projects/ti-rank/src/cpp/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

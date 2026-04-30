@@ -1,0 +1,3 @@
+/home/Selby/Projects/ti-rank/src/cpp/CMakeFiles/TIRank.dir
+/home/Selby/Projects/ti-rank/src/cpp/CMakeFiles/edit_cache.dir
+/home/Selby/Projects/ti-rank/src/cpp/CMakeFiles/rebuild_cache.dir
